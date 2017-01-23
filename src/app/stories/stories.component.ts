@@ -13,7 +13,7 @@ items;
      }
 
   ngOnInit() {
-    this._hackerNewsApiService.fetchStories()
+    this._hackerNewsApiService.fetchStories('news',1)
     .subscribe(
       items=>this.items=items,
       error => console.log('Error fetching stories')
