@@ -9,10 +9,15 @@ import { HackernewsApiService } from '../hackernews-api.service';
 })
 export class StoriesComponent implements OnInit {
 items;
-  constructor() {
+  constructor(private _hackerNewsApiService:HackernewsApiService) {
      }
 
   ngOnInit() {
+    this._hackerNewsApiService.fetchStories()
+    .subscribe(
+      items=>this.items=items,
+      error => console.log('Error fetching stories')
+    );
   }
 
 }

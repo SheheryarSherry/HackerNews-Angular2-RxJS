@@ -11,7 +11,7 @@ baseUrl:string;
    }
    fetchStories():Observable<any>{
      return this.http.get(`${this.baseUrl}/topstories.json`)
-     .map(response=>response.json);
+     .map(response=>response.json());
    }
 
 }
