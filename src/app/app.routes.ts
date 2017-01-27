@@ -13,5 +13,4 @@ const routes: Routes = [
   {path: 'item/:id', component: ItemCommentsComponent}
 ];
 
-export const routing = RouterModule.forRoot(routes)
-]
+export const routing = RouterModule.forRoot(routes);
